@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Blog"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta property="og:type" content="blog"><meta property="og:title" content="Blog"><meta property="og:url" content="https://king-fly.github.io/"><meta property="og:site_name" content="Blog"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://king-fly.github.io/img/og_image.png"><meta property="article:author" content="KingFly"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://king-fly.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://king-fly.github.io"},"headline":"Blog","image":["https://king-fly.github.io/img/og_image.png"],"author":{"@type":"Person","name":"KingFly"},"publisher":{"@type":"Organization","name":"Blog","logo":{"@type":"ImageObject","url":"https://king-fly.github.io/img/logo.svg"}},"description":""}</script><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item is-active" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/King-fly"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-03-16T01:02:36.000Z" title="2023/3/16 09:02:36">2023-03-16</time>发表</span><span class="level-item"><time dateTime="2023-03-16T01:22:54.162Z" title="2023/3/16 09:22:54">2023-03-16</time>更新</span><span class="level-item">7 分钟读完 (大约993个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/03/16/%E4%BA%A7%E5%93%81%E5%88%86%E6%9E%90/">产品 Taplio 和TweetHunter 介绍</a></h1><div class="content"><h2 id="一、Tweethunter-产品介绍"><a href="#一、Tweethunter-产品介绍" class="headerlink" title="一、Tweethunter 产品介绍"></a>一、Tweethunter 产品介绍</h2><p>Tweethunter 是一款 Twitter 分析工具，它可以帮助用户通过指定特定关键字或主题来搜索和监测与之相关的 Twitter 帖子、用户名以及其他相关信息。以下是此产品的主要功能：</p>
+<h2 id="实时跟踪特定的关键字"><a href="#实时跟踪特定的关键字" class="headerlink" title="实时跟踪特定的关键字"></a>实时跟踪特定的关键字</h2><p>Tweethunter 允许用户在实时中搜索和筛选 Twitter 上包括那些有特定关键字或短语的 tweets，并将它们汇总到一个易于管理的平台中。在这里，用户可以查看这些推文的相关统计数据。</p>
+<h2 id="监听话题"><a href="#监听话题" class="headerlink" title="监听话题"></a>监听话题</h2><p>该工具可以根据特定话题的名称或自定义相关关键字来监听相应的话题。它不仅能够收集所有内容（例如推文、赞美、评论等），还显示正在谈论该话题的人的详细信息。</p>
+<h2 id="分析用户"><a href="#分析用户" class="headerlink" title="分析用户"></a>分析用户</h2><p>Tweethunter 可以分析单个用户并提供与其相关的所有信息。例如，您可以查看其基本统计数据以及发布的最新推文及其受欢迎度。该工具还允许比较两个或多个用户，以了解每个用户的影响力和知名度。</p>
+<h2 id="导出和分享数据"><a href="#导出和分享数据" class="headerlink" title="导出和分享数据"></a>导出和分享数据</h2><p>Tweethunter 用户可以随时将导出包含所选项的统计数据为 PDF 或 CSV 文件。导出文件格式可根据用户的需要进行调整。这些数据可以用来精确把握用户群体、市场趋势等行业内重要事项。</p>
+<p>总体来说，Tweethunter 是一款强大的 Twitter 分析工具，具有实时推特搜索、话题监听、用户分析以及导出数据等重要功能。</p>
+<h2 id="二、Taplio-产品介绍"><a href="#二、Taplio-产品介绍" class="headerlink" title="二、Taplio 产品介绍"></a>二、Taplio 产品介绍</h2><p>Taplio 是一款帮助用户快速创建和发布线上问卷调查的 SaaS（软件即服务）产品。下面从商业模式的角度进行分析：</p>
+<p><strong>价值主张：</strong></p>
+<ul>
+<li>简化工作流程：Taplio 提供了一个直观、易用的平台，使得用户可以轻松地创建和发布问卷调查，并收集和分析数据。</li>
+<li>增强效率：用户可以利用 Taplio 生成的问卷链接来收集反馈，而不需要自己收集数据，这节省了宝贵的时间和精力。</li>
+</ul>
+<p><strong>客户细分：</strong></p>
+<ul>
+<li>Taplio 的主要客户是个人用户和小型企业，他们需要一种简单易用的方法收集反馈并了解目标受众的需求。</li>
+</ul>
+<p><strong>收入来源：</strong></p>
+<ul>
+<li>订阅收费模式：Taplio 提供免费试用期，让用户在使用 Taplio 之前先了解产品的功能和优点。随后，用户可以选择订阅不同的付费套餐，每个套餐都有不同的配额和价格，以满足用户不同需求的定制化。</li>
+<li>提供增值服务：在用户订阅付费套餐后，Taplio 还提供一些增值服务，如高级数据分析报告、品牌定制等特殊服务。这些额外的功能也会帮助 Taplio 增加收入来源。</li>
+</ul>
+<p><strong>渠道分销：</strong></p>
+<ul>
+<li>自主营销渠道：除非用户通过朋友或同事介绍，否则大多数用户可以通过 Taplio 的网站或社交媒体广告找到该产品。</li>
+<li>合作伙伴合作渠道：Taplio 可能与博客、出版商或其他公司合作，扩大其知名度和覆盖范围，吸引更多潜在客户。</li>
+</ul>
+<p>总之，Taplio 通过为用户提供方便、高效的问卷调查服务，以及订阅收费和增值服务等多种方式实现商业模式创新，成为当前市场上备受鼓舞的创新公司之一。</p>
+</div></article></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://avatars.githubusercontent.com/u/1787868?v=4" alt="KingFly"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">KingFly</p><p class="is-size-6 is-block">Software engineer</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">1</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">0</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">0</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/King-fly" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/King-fly"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com/Jack_king_fly"><i class="fab fa-twitter"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://github.com/King-fly" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Github</span></span><span class="level-right"><span class="level-item tag">github.com</span></span></a></li></ul></div></div></div><!--!--><!--!--><div class="column-right-shadow is-hidden-widescreen"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3"><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-03-16T01:02:36.000Z">2023-03-16</time></p><p class="title"><a href="/2023/03/16/%E4%BA%A7%E5%93%81%E5%88%86%E6%9E%90/">产品 Taplio 和TweetHunter 介绍</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2023/03/"><span class="level-start"><span class="level-item">三月 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Blog" height="28"></a><p class="is-size-7"><span>&copy; 2023 KingFly</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/King-fly"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
